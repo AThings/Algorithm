@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr = [];
+        for( let i = 0; i<10;i++) {
+            let num = Math.ceil(Math.random()*10)
+            arr.push(num)
+        }
+        console.log(arr,'bublestart')
+        function bubleSort(arr) {
+            let res = Array.from(arr);
+            let len = res.length;
+            for(let i=0;i<len;i++) {
+                for( let j=0;j<len-i-1;j++){
+                    if(res[j] > res[j+1]) {
+                        [res[j],res[j+1]] = [res[j+1],res[j]]
+                    }
+                }
+            }
+            return res
+        }
+        console.log(bubleSort(arr),'bublefinish')
+
+        console.log(arr,'selectstart')
+        function selectSort(arr) {
+            let res = Array.from(arr);
+            let len = res.length;
+            for(let i = 0;i<len-1;i++){
+                let minNum = res[i];
+                let index = i;
+                for(let j = i+1;j<len;j++){
+                    if(res[j] < minNum) {
+                        [res[j],minNum] = [minNum,res[j]];
+                        index = j;
+                    }
+                }
+                [minNum,res[i]] = [res[i],minNum];
+            }
+            return res
+        }
+        console.log(selectSort(arr),'selectfinish')
+
+        console.log(arr,'insertstart')
+        function insertSort(arr) {
+            let res = Array.from(arr);
+            let len = res.length;
+            for(let i=1;i<len;i++){
+                for(let j=i;j>0;j--){
+                    if(res[j-1]>res[j]){
+                        [res[j-1],res[j]] = [res[j],res[j-1]]
+                    }
+                    else {
+                        break;
+                    }
+                }
+            }
+            return res
+        }
+        console.log(insertSort(arr),'insertfinised')
+
+        console.log(arr,'quickstart')
+        function quickSort(arr){
+            if (arr.length<=1) {
+                return arr
+            }
+            let res = Array.from(arr);
+            let left = [];
+            let right = [];
+            let flag = res.shift();
+            for(let i=0;i<res.length;i++) {
+                if(res[i]<flag){
+                    left.push(res[i])
+                } else {
+                    right.push(res[i])
+                }
+            }
+
+            return quickSort(left).concat(flag,quickSort(right))
+        }
+        console.log(quickSort(arr),'quickfinised')
+
+        console.log(arr,'shellstart')
+        function shellSort (arr,gra) {
+            let res = Array.from(arr);
+            for(let i=0;i<gra.length;i++){
+                let n = gra[i]
+                for(let j=n;j<res.length;j++){
+                    for(let k=j;k>0;k-=n){
+                        if(res[k] < res[k-n]){
+                            [res[k],res[k-n]] = [res[k-n],res[k]]
+                        } else {
+                            break
+                        }
+                    }
+                }
+            }
+            return res
+        }
+        console.log(shellSort(arr,[3,2,1]),'shellfinish')
+    </script>
+</body>
+</html>

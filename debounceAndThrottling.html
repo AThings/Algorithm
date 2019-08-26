@@ -28,7 +28,7 @@
         var move = function() {
             app.innerHTML = ++number
         }
-        function throttle(fn, interval) { //节流
+        function throttle(fn, interval) { //节流  n秒内只触发一次事件
             // last为上一次触发回调的时间
             let last = 0
   
@@ -49,7 +49,7 @@
                 }
             }
         }
-        function debounce(fn, delay) { // 防抖
+        function debounce(fn, delay) { // 防抖 n秒内触发一次事件 如果时间被触发，则重新计时
             // 定时器
             let timer = null
   

@@ -42,8 +42,8 @@
 
         const traverse = (ndRoot) => {
             const queue = [ndRoot];
-            console.log(queue.shift(),'queue')
-            while (queue.length) {        
+            while (queue.length) {      
+                console.log(queue,'queue1')  
                 const node = queue.shift();
                 printInfo(node);
 
@@ -51,6 +51,7 @@
                     continue;
                 }
                 Array.from(node.children).forEach(x => queue.push(x));    
+                console.log(queue,'queue2') 
             }
         };
 
