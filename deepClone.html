@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const data = {
+            name : 'fengjialue',
+            age : 20,
+            lover : {
+                first : 'atago',
+                second : 'eugen',
+                third : 'raikou'
+            },
+            money : null ,
+            future : undefined,
+            haveFigure : ['妖刀姬','哈曼','欧根亲王','源赖光','光辉'],
+            saySomething : () => {
+                console.log('I love my lovers')
+            },
+            IneedABoolean : true
+        }
+        let _toString = Object.prototype.toString();
+        let getType = (item) => _toString.call(item).slice(8,-1);
+        let isTypeof = (item, type) => {
+            return map[type] && map[type] == getType(item)
+        }
+    </script>
+</body>
+</html>

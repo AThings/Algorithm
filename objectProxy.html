@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>监听对象属性（通过特殊方法创建对象）</h1>
+    <div id='app'></div>
+    <input type='text' id='input'>
+    <script>
+        let user = {}
+        let temp = null
+        Object.defineProperty(user, 'name', {
+            get:function(val){
+                return temp
+            },
+            set:function(val){
+                temp = val
+                app.innerText = temp
+            }
+        })
+        let app = document.getElementById('app')
+        app.innerText = user.name
+        let input = document.getElementById('input')
+        input.addEventListener('keyup', function(){
+            user.name = input.value
+        })
+    </script>
+</body>
+</html>

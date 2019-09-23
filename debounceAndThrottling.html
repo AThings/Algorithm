@@ -31,7 +31,7 @@
         function throttle(fn, interval) { //节流  n秒内只触发一次事件
             // last为上一次触发回调的时间
             let last = 0
-  
+            
             // 将throttle处理结果当作函数返回
             return function () {
                 // 保留调用时的this上下文

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = [
+            {
+                id: '1',
+                name: '广东省',
+                children: [
+                    {
+                        id: '11',
+                        name: '深圳市',
+                        children: [
+                            {
+                                id: '111',
+                                name: '南山区'
+                            },
+                            {
+                                id: '112',
+                                name: '福田区'
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+        
+        const value = '112'
+        function fn (value) {
+            let res = [];
+            let tempArr = Array.from(arr);
+            let stack = [];
+            stack.push(tempArr.pop());
+            while(stack.length){
+                let obj = stack.pop()
+                
+                if(obj.children == undefined && obj.id !=value) {
+                    continue
+                }
+                res.push(obj.id)
+
+                Array.from(obj.children).forEach(x => stack.push(x))
+            }
+        }
+        console.log(fn(value))
+    </script>
+</body>
+</html>

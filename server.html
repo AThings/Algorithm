@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let data = [
+    {
+        "id": "pm.i18n_okr.objective.018",
+        "value": "请选择群组",
+        "annotation": ""
+    },
+    {
+        "id": "pm.i18n_okr.objective.019",
+        "value": "不能选择此目标可见范围",
+        "annotation": ""
+    },
+    {
+        "id": "pm.i18n_pbc.result.014",
+        "value": "人员没有对应的NC系统用户id，请联系HR同步数据！",
+        "annotation": ""
+    },
+    {
+        "id": "pm.i18n_okr.objective.020",
+        "value": "人员已关注",
+        "annotation": ""
+    },
+    {
+        "id": "pm.i18n_pbc.ps.017",
+        "value": "方案选择不允许员工填报，公共量表需要满足指标权重100%",
+        "annotation": ""
+    },
+    {
+        "id": "pm.i18n_pbc.ps.018",
+        "value": "考核对象的评价人未对应人员，请检查",
+        "annotation": ""
+    },
+    {
+        "id": "pm.i18n_pbc.ps.019",
+        "value": "方案已设置为不允许员工填报",
+        "annotation": ""
+    },
+    {
+        "id": "pm.i18n_pbc.ps.020",
+        "value": "方案中按指标分类、指标两级设置权重与公共量表不相符",
+        "annotation": ""
+    },
+    {
+        "id": "pm.i18n_pbc.ps.021",
+        "value": "未设置考核对象的量表，请检查",
+        "annotation": ""
+    },
+    {
+        "id": "pm.i18n_pbc.ps.022",
+        "value": "不能改变是否员工进行指标填报选项",
+        "annotation": ""
+    },
+    {
+        "id": "pm.i18n_pbc.ps.023",
+        "value": "考核流程设置不完整",
+        "annotation": ""
+    },
+    {
+        "id": "pm.i18n_pbc.ps.024",
+        "value": "考核对象组设置不完整",
+        "annotation": ""
+    },
+    {
+        "id": "pm.i18n_pbc.ps.025",
+        "value": "请先删除考核对象",
+        "annotation": ""
+    },
+    {
+        "id": "pm.i18n_core.ps.066",
+        "value": "考核等级规则中缺少等级设置",
+        "annotation": ""
+    },
+    {
+        "id": "pm.i18n_core.ps.067",
+        "value": "方案不允许员工填报！下列考核对象的公共量表不能为空;{0}",
+        "annotation": ""
+    },
+    {
+        "id": "pm.i18n_core.ps.068",
+        "value": "下列考核对象的公共量表类型不是{0};{1}",
+        "annotation": ""
+    },
+    {
+        "id": "pm.i18n_core.ps.069",
+        "value": "下列公共量表'{0}'权重设置不正确;",
+        "annotation": ""
+    },
+    {
+        "id": "pm.i18n_core.ps.070",
+        "value": "下列考核对象的考核人信息不完整;{0}",
+        "annotation": ""
+    },
+    {
+        "id": "pm.i18n_core.ps.071",
+        "value": "未查询到符合条件的数据",
+        "annotation": ""
+    },
+    {
+        "id": "pm.i18n_core.ps.072",
+        "value": "公共量表已被引用，不可以删除",
+        "annotation": ""
+    },
+    {
+        "id": "pm.i18n_core.ps.073",
+        "value": "公共量表名称已存在",
+        "annotation": ""
+    },
+    {
+        "id": "pm.i18n_core.ps.074",
+        "value": "权重之和不能大于100！",
+        "annotation": ""
+    },
+    {
+        "id": "pm.i18n_core.ps.075",
+        "value": "名称不正确",
+        "annotation": ""
+    },
+    {
+        "id": "pm.i18n_core.ps.076",
+        "value": "来自公共量表的指标不能删除。",
+        "annotation": ""
+    },
+    {
+        "id": "pm.i18n_core.ps.077",
+        "value": "来自公共量表的指标不能进行编辑。",
+        "annotation": ""
+    },
+    {
+        "id": "pm.i18n_core.ps.078",
+        "value": "原有量表中包含公共量表指标，不能进行导入。",
+        "annotation": ""
+    },
+    {
+        "id": "pm.i18n_core.comm.019",
+        "value": "{0}人员重复",
+        "annotation": ""
+    },
+    {
+        "id": "pm.i18n_okr.objective.021",
+        "value": "请修改进度信息后重新提交",
+        "annotation": ""
+    },
+    {
+        "id": "pm.i18n_okr.objective.022",
+        "value": "完成率为100%才可以完成目标",
+        "annotation": ""
+    },
+    {
+        "id": "pm.i18n_okr.objective.023",
+        "value": "目标已被引用，不可以删除",
+        "annotation": ""
+    },
+    {
+        "id": "pm.i18n_pbc.pa.020",
+        "value": "评分已结束",
+        "annotation": ""
+    },
+    {
+        "id": "pm.i18n_pbc.pa.021",
+        "value": "没有评价总分，不能提交",
+        "annotation": ""
+    },
+    {
+        "id": "pm.i18n_pbc.ps.026",
+        "value": "不能删除考核对象组中所有考核对象",
+        "annotation": ""
+    },
+    {
+        "id": "pm.i18n_core.ps.079",
+        "value": "复制的方案({0})已存在，请修改名称后再进行操作。",
+        "annotation": ""
+    },
+    {
+        "id": "pm.i18n_core.comm.020",
+        "value": "未获取到人员 {0} 信息",
+        "annotation": ""
+    },
+    {
+        "id": "pm.i18n_core.comm.021",
+        "value": "人员 {0} 未对应用户",
+        "annotation": ""
+    }
+]    
+
+    let res = '['
+    for(let i=0;i<data.length;i++){
+        let mubanname = data[i]["id"].split(".")[0];
+        res +=`{
+                    "模块名称": "${mubanname}",
+                    "编号": "${data[i]["id"]}",
+                    "词条内容": "${data[i]["value"]}",
+                    "注释": "${data[i]["annotation"]}"
+                },`
+    }
+    res +=']'
+    console.log(res)
+    </script>
+</body>
+</html>
