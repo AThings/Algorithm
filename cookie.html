@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var date = new Date()
+        date.setDate(date.getDate() + 1)
+        document.cookie = "username = fengjialue;expires=" + date.toUTCString()
+        document.cookie = "user1name = fengjialue;expires=" + date.toUTCString()
+        function setCookie (key, value, expires){ // expires 单位为天
+            var date = new Date ()
+            date.setDate(date.getDate() + expires)
+            document.cookie = `${key} = ${value}; expires = ${date}`
+        }
+
+        function getCookie (key) {
+            var tempObj = {};
+            var cookieArr = document.cookie.split(';');
+            cookieArr.map((val) => {
+                var temp = val.split('=');
+                tempObj[temp[0]] = temp[1]
+            })
+            return tempObj[key]
+        }
+
+        function delCookie (key) {
+            var date = new Date()
+            date.setDate(date.getDate() - 1)
+            document.cookie = `${key} = ; expires = ${date}`
+        }
+
+        function getAllCookie () {
+            return document.cookie
+        }
+    </script>
+</body>
+</html>

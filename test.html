@@ -7,6 +7,7 @@
     <title>Document</title>
 </head>
 <body>
+    <div id='result'></div>
     <script>
         function CheckGroup(renderTo, options, isMultiple) {
             var that = this;
@@ -26,9 +27,12 @@
             var that = this;
             // 请补全代码，拼接html字符串
             var sHtml = '';
+            for(key in that.options){
+                sHtml += `<div data-value='${that.options[key].value}'>${that.options[key].text}</div>`
+            }
             that.renderTo.innerHTML = sHtml;
             // 请补全代码，获取checkgroup的dom元素引用
-            that.el = null;
+            that.el = that.renderTo;
         }
 
         function fInitEvent() {
