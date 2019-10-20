@@ -45,6 +45,26 @@ module.exports = {
     },
     module:{ // 模块
         rules:[ // 规则
+            {
+                test:/\.html$/,
+                use: 'html-withimg-loader'
+            },
+            // {
+            //     test:/\.(png|jpg|gif)$/,
+            //     use: 'file-loader'
+            // },
+            {
+                test:/\.(png|jpg|gif)$/,
+                use:[
+                    {
+                        // 做一个限制 当小于多少k时转为base64 否则使用file-loader
+                        loader:'url-loader',
+                        options:{
+                            limit:20*1024
+                        }
+                    }
+                ]
+            },
             // {
             //     test:require.resolve('jquery'), // 当文件中引入jquery时
             //     use: 'expose-loader?$'

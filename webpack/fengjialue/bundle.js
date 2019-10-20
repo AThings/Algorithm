@@ -4277,6 +4277,17 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/
 
 /***/ }),
 
+/***/ "./src/atago.jpg":
+/*!***********************!*\
+  !*** ./src/atago.jpg ***!
+  \***********************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"428b40cbd7b4f372aabd2d4a84e06fcc.jpg\";\n\n//# sourceURL=webpack:///./src/atago.jpg?");
+
+/***/ }),
+
 /***/ "./src/index.css":
 /*!***********************!*\
   !*** ./src/index.css ***!
@@ -4296,18 +4307,7 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ \"./node_modules/@babel/runtime/helpers/classCallCheck.js\");\n/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! jquery */ \"jquery\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_1__);\n\n\nvar _class, _temp;\n\n//import $ from 'expose-loader?$!jquery'  // 内联loader 写在代码里的loader\n\nconsole.log(window.$, 'window');\nconsole.log(jquery__WEBPACK_IMPORTED_MODULE_1___default.a, '$');\n\nvar str = __webpack_require__(/*! ./a.js */ \"./src/a.js\");\n\nconsole.log('hello ' + str[\"default\"]);\n\n__webpack_require__(/*! ./index.css */ \"./src/index.css\");\n\n__webpack_require__(/*! ./a.less */ \"./src/a.less\");\n\nvar fn = function fn() {\n  console.log('fengjialue this is es6');\n};\n\nfn();\n\nvar A = log(_class = (_temp = function A() {\n  _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, A);\n\n  this.a = 1;\n}, _temp)) || _class;\n\nvar Aclass = new A();\nconsole.log(Aclass.a);\n\nfunction log(target) {\n  console.log(target, '23');\n}\n\n//# sourceURL=webpack:///./src/index.js?");
-
-/***/ }),
-
-/***/ "jquery":
-/*!********************!*\
-  !*** external "$" ***!
-  \********************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-eval("module.exports = $;\n\n//# sourceURL=webpack:///external_%22$%22?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ \"./node_modules/@babel/runtime/helpers/classCallCheck.js\");\n/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _atago_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./atago.jpg */ \"./src/atago.jpg\");\n/* harmony import */ var _atago_jpg__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_atago_jpg__WEBPACK_IMPORTED_MODULE_1__);\n\n\nvar _class, _temp;\n\n// webapck 打包图片\n// 1) 在js中创建引用\n// file-loader 生成图片到打包后的目录下 返回一个新图片地址\n // 引入图片 需要file-loader\n\nvar image = new Image();\nimage.src = _atago_jpg__WEBPACK_IMPORTED_MODULE_1___default.a;\nconsole.log(_atago_jpg__WEBPACK_IMPORTED_MODULE_1___default.a);\ndocument.body.appendChild(image); // 2) 在css引入background('url')\n// 3) <img src=\"\" alt=\"\">\n// html-withimg-loader 解析html编译图片\n//import $ from 'expose-loader?$!jquery'  // 内联loader 写在代码里的loader\n//  import $ from 'jquery'\n// console.log(window.$,'window')\n// console.log($,'$')\n\n/*    引入第三方模块\r\n *    1、expose-loader暴露到window上\r\n *    2、providePlugin给每个文件提供$\r\n *    3、引入不打包\r\n * \r\n * \r\n * \r\n * \r\n * \r\n * \r\n */\n\nvar str = __webpack_require__(/*! ./a.js */ \"./src/a.js\");\n\nconsole.log('hello ' + str[\"default\"]);\n\n__webpack_require__(/*! ./index.css */ \"./src/index.css\");\n\n__webpack_require__(/*! ./a.less */ \"./src/a.less\");\n\nvar fn = function fn() {\n  console.log('fengjialue this is es6');\n};\n\nfn();\n\nvar A = log(_class = (_temp = function A() {\n  _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, A);\n\n  this.a = 1;\n}, _temp)) || _class;\n\nvar Aclass = new A();\nconsole.log(Aclass.a);\n\nfunction log(target) {\n  console.log(target, '23');\n}\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ })
 

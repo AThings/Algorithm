@@ -2,11 +2,12 @@ body{
     color: blue
 }
 body {
-    background: red;
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg)
+    background-color: red;
+    background-image: url(428b40cbd7b4f372aabd2d4a84e06fcc.jpg)
 }
 body div {
   border: 1px solid black;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
