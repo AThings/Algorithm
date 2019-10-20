@@ -41,7 +41,7 @@
         }
     ```
 #### 2019-10-20 10 处理图片
-* 1) 在js中创建引用
+* 1)在js中创建引用
 ```
 index.js
     // file-loader 生成图片到打包后的目录下 返回一个新图片地址
@@ -71,7 +71,7 @@ index.css
         background-image: url('./atago.jpg')
     }
 ```
-* 3)<img src="" alt="">
+* 3)html中img标签
 ```
 index.html
     // html-withimg-loader 解析html编译图片
@@ -88,7 +88,7 @@ webpack.config.js
         ]
     }
 ```
-* 4) 使用更常用的url-loader处理图片
+* 4)使用更常用的url-loader处理图片
 ```
 webpack.config.js
     module:{
