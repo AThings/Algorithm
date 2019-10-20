@@ -2,7 +2,15 @@
 let path = require('path');
 let HtmlWebpackPlugin = require('html-webpack-plugin') // 类
 let MiniCssExtractPlugin = require('mini-css-extract-plugin')
+let OptimizeCss = require('optimize-css-assets-webpack-plugin')
+let terserJSPlugin = require('terser-webpack-plugin')
 module.exports = {
+    optimization:{
+        minimizer: [
+            new terserJSPlugin({}),
+            new OptimizeCss({})
+        ]
+    },
     devServer: { //开发服务器配置
         port: 3000,
         progress: true ,// 进度条
@@ -18,10 +26,10 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './src/index.html',
             filename: 'index.html',
-            minify: {
-                removeAttributeQuotes: true,
-                collapseWhitespace: true
-            },
+            // minify: {    压缩html development下也会压缩
+            //     removeAttributeQuotes: true,
+            //     collapseWhitespace: true
+            // },
             hash: true
         }),
         new MiniCssExtractPlugin({
@@ -30,11 +38,45 @@ module.exports = {
     ],
     module:{ // 模块
         rules:[ // 规则
+            // {
+            //     test: /\.js$/,
+            //     use:[
+            //         {
+            //             loader: 'eslint-loader'
+            //         }
+            //     ],
+            //     enforce: 'pre'
+            // },
+            { 
+                test: /\.js$/,
+                use:[{
+                    loader:'babel-loader',
+                    options:{ 
+                        presets:[ // es6转es5
+                            [
+                                '@babel/preset-env'
+                            ]
+                        ],
+                        plugins:[
+                            ["@babel/plugin-proposal-decorators", { "legacy": true }],
+                            ["@babel/plugin-proposal-class-properties", { "loose" : true }],
+                            ["@babel/plugin-transform-runtime"]
+                        ]   
+                    }
+                }],
+                include:path.resolve(__dirname,'src'), // 包括 处理那些文件夹下的js
+                exclude: /node_modules/  // 排除 不处理那些文件夹下的js
+        },
             // css-loader 解析 @import
             // style-loader 将css插入html
             // loader 希望单一
             // loader 有顺序 从右向左 从下到上
-            { test: /\.css$/,use:[ MiniCssExtractPlugin.loader ,'css-loader','postcss-loader']},
+            { test: /\.css$/,
+                use:[ 
+                    {
+                        loader:MiniCssExtractPlugin.loader
+                    },
+                    'css-loader','postcss-loader']},
             { test: /\.less$/,use:[MiniCssExtractPlugin.loader,'css-loader','postcss-loader',{
                 loader:'less-loader'
             }]}
