@@ -4296,7 +4296,18 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ \"./node_modules/@babel/runtime/helpers/classCallCheck.js\");\n/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__);\n\n\nvar _class, _temp;\n\nvar str = __webpack_require__(/*! ./a.js */ \"./src/a.js\");\n\nconsole.log('hello ' + str[\"default\"]);\n\n__webpack_require__(/*! ./index.css */ \"./src/index.css\");\n\n__webpack_require__(/*! ./a.less */ \"./src/a.less\");\n\nvar fn = function fn() {\n  console.log('fengjialue this is es6');\n};\n\nfn();\n\nvar A = log(_class = (_temp = function A() {\n  _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, A);\n\n  this.a = 1;\n}, _temp)) || _class;\n\nvar Aclass = new A();\nconsole.log(Aclass.a);\n\nfunction log(target) {\n  console.log(target, '23');\n}\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ \"./node_modules/@babel/runtime/helpers/classCallCheck.js\");\n/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! jquery */ \"jquery\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_1__);\n\n\nvar _class, _temp;\n\n//import $ from 'expose-loader?$!jquery'  // 内联loader 写在代码里的loader\n\nconsole.log(window.$, 'window');\nconsole.log(jquery__WEBPACK_IMPORTED_MODULE_1___default.a, '$');\n\nvar str = __webpack_require__(/*! ./a.js */ \"./src/a.js\");\n\nconsole.log('hello ' + str[\"default\"]);\n\n__webpack_require__(/*! ./index.css */ \"./src/index.css\");\n\n__webpack_require__(/*! ./a.less */ \"./src/a.less\");\n\nvar fn = function fn() {\n  console.log('fengjialue this is es6');\n};\n\nfn();\n\nvar A = log(_class = (_temp = function A() {\n  _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, A);\n\n  this.a = 1;\n}, _temp)) || _class;\n\nvar Aclass = new A();\nconsole.log(Aclass.a);\n\nfunction log(target) {\n  console.log(target, '23');\n}\n\n//# sourceURL=webpack:///./src/index.js?");
+
+/***/ }),
+
+/***/ "jquery":
+/*!********************!*\
+  !*** external "$" ***!
+  \********************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = $;\n\n//# sourceURL=webpack:///external_%22$%22?");
 
 /***/ })
 

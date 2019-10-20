@@ -4,6 +4,7 @@ let HtmlWebpackPlugin = require('html-webpack-plugin') // 类
 let MiniCssExtractPlugin = require('mini-css-extract-plugin')
 let OptimizeCss = require('optimize-css-assets-webpack-plugin')
 let terserJSPlugin = require('terser-webpack-plugin')
+let webpack = require('webpack')
 module.exports = {
     optimization:{
         minimizer: [
@@ -34,10 +35,20 @@ module.exports = {
         }),
         new MiniCssExtractPlugin({
             filename: 'index.css'
-        })
+        }),
+        // new webpack.ProvidePlugin({
+        //     $:'jquery'  // 向文件中注入$
+        // })
     ],
+    externals:{
+        jquery:'$'
+    },
     module:{ // 模块
         rules:[ // 规则
+            // {
+            //     test:require.resolve('jquery'), // 当文件中引入jquery时
+            //     use: 'expose-loader?$'
+            // },
             // {
             //     test: /\.js$/,
             //     use:[
